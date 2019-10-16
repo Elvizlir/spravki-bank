@@ -1,0 +1,13 @@
+mixin s-video()
+	// start s-video
+	+b.SECTION.s-video.section.block-with-lazy#s-video&attributes(attributes)
+		.container
+			.main-block
+				h2 О нашей справке 
+					span за 60 секунд
+				+e.video-wrap
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/VW5HZXq0C6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					+icon('video-p')
+				+e.text Справки из банка о состоянии счета на текущую дату в нужной Вам валюте: 
+					span в рублях, долларах, евро.
+	// end s-video

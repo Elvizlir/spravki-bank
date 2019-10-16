@@ -1,0 +1,89 @@
+.s-mark-advantages {
+	position: relative;
+	padding: rem(45) 0 rem(50);
+	@include media-breakpoint-up(lg) {
+		padding: rem(100) 0;
+	}
+	&__bg-wrap{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		img{
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__title {
+		margin-bottom: rem(20);
+		line-height: rem(48);
+	}
+
+	&__subtitle {
+		margin-bottom: rem(40);
+	}
+
+	&__image {
+		height: auto;
+		max-width: 100%;
+	}
+	
+	&__item-wrap{
+		margin-bottom: rem(30);
+	}
+	
+	&__item{
+		background-color: #fff;
+		height: 100%;
+		text-align: center;
+		padding: rem(20) rem(14);
+		min-height: rem(160);
+		border-radius: rem(7);
+		box-shadow: 0px 8px 20px rgba(0,0,0,0.07);
+}
+
+	&__item-title {
+		font-weight: 300;
+		margin-top: rem(20);
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}

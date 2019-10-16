@@ -1,0 +1,53 @@
+mixin s-deliver-city()
+	// start s-deliver-city
+	+b.SECTION.s-deliver-city.section.block-with-lazy#s-deliver-city&attributes(attributes)
+		.container
+			.main-block
+				+e.H2.title.block-title Доставка справки о доходах из банка по Москве
+				.row
+					+e.item.col-md-7
+						+e.item-header
+							+e.img-wrapper
+								+e.IMG.item-image(src="img/deliver-city-1.png" alt="#")
+							+e.item-number 01
+						+e.item-title Звонок/Заявка
+						+e.phone-block
+							+e.phone-item
+								+e.phone-city
+									+icon('phone')
+									| Москва
+								+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+							+e.phone-item
+								+e.phone-city
+									+icon('phone')
+									| Санкт-Петербург:
+								+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+							+e.phone-item
+								+e.phone-city
+									+icon('phone')
+									| Новосибирск:
+								+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+						+e.item-text с 09:00 - 22:00 по Мск
+						+e.item-text или оформляете заявку с сайта
+					+e.item.col-md
+						+e.item-header
+							+e.img-wrapper
+								+e.IMG.item-image(src="img/deliver-city-2.png" alt="#")
+							+e.item-number 02
+						+e.item-title Консультация
+						+e.item-text Ожидайте звонка оператора. Мы уточним все необходимые детали и сразу приступим к оформлению документа.
+					+e.item.col-md-7
+						+e.item-header
+							+e.img-wrapper
+								+e.IMG.item-image(src="img/deliver-city-3.png" alt="#")
+							+e.item-number 03
+						+e.item-title Оформление
+						+e.item-text Грамотно заполняем и выдаем официально заполненную справку о доходах из банка на законных основаниях.
+					+e.item.col-md
+						+e.item-header
+							+e.img-wrapper
+								+e.IMG.item-image(src="img/deliver-city-4.png" alt="#")
+							+e.item-number 04
+						+e.item-title Доставка
+						+e.item-text В пределах кольцевой станции метрополитена доставка БЕСПЛАТНА!<br>Доставка за МКАД возможна с доплатой от 500 до 1000 рублей!
+	// end s-deliver-city

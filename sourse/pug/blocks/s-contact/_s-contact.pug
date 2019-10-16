@@ -1,0 +1,43 @@
+mixin s-contact()
+	// start s-contact
+	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+		.container
+			.row
+				+e.contact-col.col-md-6.col-lg
+					+e.col-title Контакты
+					+e.adress-block
+						+e.item
+							+e.text г. Москва:
+							+e.A.link(href='tel:+74951084392') +7 (495) 108-43-92
+							+e.text ул. Новый арбат, 3, оф. 215
+						+e.item
+							+e.text г. Санкт-Петербург:
+							+e.A.link(href='tel:+74951084392') +7 (495) 108-43-92
+							+e.text ул. Новый арбат, 3, оф. 215
+						+e.item
+							+e.text г. Новосибирск:
+							+e.A.link(href='tel:+74951084392') +7 (495) 108-43-92
+							+e.text ул. Новый арбат, 3, оф. 215
+					+e.mail-block
+						+e.A.mail(href='mailto:mail@spravki-bank.com') mail@spravki-bank.com
+
+				+e.form-col.col-md-6.col-lg-auto
+					+e.col-title Задать вопрос
+					+e.form
+						+form-wrap
+							+input("","Введите Ваше имя")
+							+input("tel","Введите номер телефона")
+							+e.input-wrap.form-group
+								+e.SELECT.input.form-control
+									option Ваш город
+									option 1
+									option 1
+									option 1
+							+ta("Введите вопрос","")
+							.btn-form
+								+e.BUTTON.btn.btn.btn-secondary(type="submit") Задать вопрос
+				+e.map-col.col-xl
+						.map-wrap
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A728c1c9f9f83f5aeb21a5dc67356b816f13c0d81911ac8b425fabe1128cf1511&amp;width=380&amp;height=380&amp;lang=ru_RU&amp;scroll=false"></script>
+						+e.map-text Главный офис:<br>г. Москва, ул. Новый арбат, 3, <br>оф. 215
+	// end s-contact

@@ -1,0 +1,72 @@
+mixin s-price()
+	// start s-price
+
+	.parallax-block(data-parallax="scroll" data-image-src="img/s-price-bg.jpg")
+		+b.SECTION.s-price.section.block-with-lazy#s-price&attributes(attributes)
+			.container
+				+e.H2.title.block-title Другие справки, <br>которые мы оформляем
+				+e.subtitle Мы предлагаем только официальные документы, которые не вызовут вопросов при проверке и не создадут вам никаких сложностей.
+				.row
+					+e.col-left.col-12.col-lg-6.d-flex.justify-content-center
+						mixin tr-line(l, r, c)
+							+e.TR.table-line(class=c)
+								+e.TD.left-part
+									+e.A.table-link(href="#")=l 
+								+e.TD.right-part=r 
+						+e.TABLE.table
+							+tr-line("Наименование","Цена, руб.","tr-title")
+							+tr-line("Справка 086/у","2000")
+							+tr-line("Справка 026/у-2000","5000","dark-line")
+							+tr-line("Справка 082/у","2000")
+							+tr-line("Справка 095/у","1500-2000","dark-line")
+							+tr-line("Справка 027/у","2000-5000")
+							+tr-line("Справка 070/у","2000","dark-line")
+							+tr-line("Справка 072/у","2500")
+							+tr-line("Справка 076/у","2500","dark-line")
+							+tr-line("Справка 079/у","2000")
+							+tr-line("Справка 063/у","3500","dark-line")
+							+tr-line("Справка 302 н","2000")
+							+tr-line("Справка 989","2500","dark-line")
+							+tr-line("Справка 164","3000")
+							+tr-line("Справка 454","2000","dark-line")
+							+tr-line("Справка 402","1200")
+							+tr-line("Справка 297","2000","dark-line")
+							+tr-line("Справка 001-гс/у","2000")
+							+tr-line("Справка в бассейн","1000","dark-line")
+							+tr-line("Справка на спорт. секцию","1500")
+							+tr-line("Справка на соревнования","1500","dark-line")
+							+tr-line("Академический отпуск","5000")
+							+tr-line("Выход из академического отпуска","2000","dark-line")
+					+e.col-right.col.d-flex.justify-content-center
+						+e.TABLE.table
+							+tr-line("Наименование","Цена, руб.","tr-title")
+							+tr-line("Справка на инвалидность","10000")
+							+tr-line("Справка о прививках","2000-6000","dark-line")
+							+tr-line("Кодирование от алкоголизма","1000")
+							+tr-line("Справка об эпидокружении","2000","dark-line")
+							+tr-line("Справка для поездки в Китай","3500-5000")
+							+tr-line("Справка для ГАИ 003-в/у","5500","dark-line")
+							+tr-line("Справка на оружие 002-о/у","5500")
+							+tr-line("Медицинская карта ребенка","5000","dark-line")
+							+tr-line("Результаты анализов","1500-3000")
+							+tr-line("Справка от фтизиатра","1500","dark-line")
+							+tr-line("Справка от гинеколога","1500")
+							+tr-line("Справка от стоматолога","1500","dark-line")
+							+tr-line("Справка от терапевта","1500")
+							+tr-line("Справка о беременности","1500","dark-line")
+							+tr-line("Справка КЭК","1500-3000")
+							+tr-line("Справка для ФМС","5500","dark-line")
+							+tr-line("Флюорография","1500")
+							+tr-line("Справка ХТИ 003-о/у","2000","dark-line")
+							+tr-line("Справка для работы на высоте","2000")
+							+tr-line("Справка для надомного обучения","2000","dark-line")
+							+tr-line("Справка от педиатра","1500")
+							+tr-line("Освобождение от физкультуры","1500","dark-line")
+				+e.order-information
+					+e.footer-block
+						+e.order-text Для заказа любой справки звоните по телефону с 09:00 до 22:00 по МСК:
+						+e.A.phone-block(href="tel:+7(495)108-74-55")
+							+e.phone-first +7 (495) 
+							+e.phone-second 108-74-55
+
+	// end s-price

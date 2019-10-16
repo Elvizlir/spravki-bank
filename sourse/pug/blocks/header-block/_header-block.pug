@@ -1,0 +1,106 @@
+mixin header-block(t)
+	// start header-block
+	if t == 'main'
+		+b.header-block(style="background-image: url(img/header-bg.jpg);")
+			.container
+				.row
+					+e.main-col.col-xl-5
+						+e.main-img-wrap
+							+e.IMG.main-img(src='img/doc.jpg' alt='')
+					.col-xl
+						h1 Справка о доходах из банка для&nbsp;оформления визы
+						+e.subtitle Получите в течение 24 часов без посещения банка официальный документ, заполненный официально в соответствии с Вашими требованиями, указанными в заявке.
+						.row
+							+e.add-col.col-md-6
+								+e.add-wrap
+									+e.add-img-wrap
+										+e.IMG.add-img(src='img/add1.png' alt='')
+									+e.add-text Абсолютно законно и легально
+							+e.add-col.col-md-6
+								+e.add-wrap
+									+e.add-img-wrap
+										+e.IMG.add-img(src='img/add2.jpg' alt='')
+									+e.add-text Подлинность выданного  документа гарантирована
+							+e.add-col.col-sm-6.order-xl-last
+								+e.price-wrap
+									+e.IMG.price-img(src='img/price.png' alt='')
+									+e.price-text 2 000
+										span рублей
+							+e.add-col.col-sm-6
+								+e.A.btn.btn.btn-secondary(href="#") Заказать справку
+
+			//- +e.container.container
+			//- 	+e.IMG.bg-photo.d-none.d-xl-block(src="img/header-bg-photo.png" alt="#")
+			//- 	.row
+			//- 		+e.col-doc.d-none.d-lg-flex.col-lg-4.col-xl
+			//- 			+e.IMG.doc-photo(src="img/blank.jpg" alt="#")
+			//- 		.col
+			//- 			+e.H1.title Медицинская справка ребенка, форма №026/у-2000
+			//- 			+e.subtitle для школы, школы-интерната, детского дома, детского сада, яслей/сада в Москве
+			//- 			+e.main-text Получите в течение 24 часов без посещения поликлиники официальный документ, заполненный действующим педиатром в соответствии с Вашими требованиями, указанными в заявке.
+			//- 			.row
+			//- 				+e.col-btn.col
+			//- 					+b.btn-main.popup-with-move-anim(href="#modal-call") Заказать справку
+			//- 				.col-12.col-md-auto.order-md-first.d-flex.d-md-block.justify-content-center
+			//- 					+b.price-block
+			//- 						+e.text Стоимость
+			//- 						+e.price 5 000
+			//- 						+e.text рублей
+
+	// end header-block
+
+
+mixin header-block-2(b, t)
+	// start header-block
+	+b.header-block(style=b)
+		+e.container.container
+					+e.H1.title=t
+
+	// end header-block
+
+
+mixin header-block-company()
+	// start header-block
+	+b.header-block#header-block-company(style="background-image: url(img/header-bg.jpg);")
+		+e.container.container
+			+e.IMG.bg-photo.d-none.d-xl-block(src="img/header-bg-photo.png" alt="#")
+			.row
+				+e.main-col.col.d-flex.justify-content-end
+					+e.block
+						+e.H1.title О КОМПАНИИ "SPRAVKI-026.COM"
+						+e.P.main-text Новый коллектив для ребенка&nbsp;&mdash; это стрессовая ситуация. Облегчить процесс адаптации в&nbsp;детском саду и&nbsp;школе поможет отсутствие лишних хлопот и&nbsp;волнений. Одной из&nbsp;самых сложных проблем раньше было получение медицинской справки 026&nbsp;у с&nbsp;подписями большого количества врачей. Перед зачислением в&nbsp;любое учреждение, работающее официально по&nbsp;образовательным программам, нужно пройти тщательное обследование. Это необходимо для того, чтобы в&nbsp;распоряжении медработника оказался большой объем сведений об&nbsp;ученике или воспитаннике. Такая информация помогает избежать вспышек заболеваемости, но&nbsp;часто она носит формальный характер.
+						+e.P.main-text Родителям не&nbsp;очень хочется водить своих детей по&nbsp;врачам только ради правильной отчетности в&nbsp;садиках и&nbsp;школах. Поэтому все больше людей принимает решение купить справку формы 026&nbsp;у для детей и&nbsp;не&nbsp;терять время на&nbsp;многочисленные осмотры и&nbsp;анализы. Второй важной причиной такого выбора является страх родителей перед посещением поликлиник из-за возможности контакта с&nbsp;больными пациентами. Никому не&nbsp;хочется болеть перед торжественным зачислением в&nbsp;ряды воспитанников детского сада или учеников школы. Мы&nbsp;предлагаем решить проблему быстро и&nbsp;просто. Оставьте заявку на&nbsp;нашем сайте. Уже на&nbsp;следующий день у&nbsp;вас на&nbsp;руках будет мед справка по&nbsp;форме 026/у-2000, заполненная в&nbsp;соответствии с&nbsp;действующим приказом Минздрава.
+
+	// end header-block
+
+
+mixin header-block-contacts()
+	// start header-block
+	+b.header-block#header-block-company(style="background-image: url(img/header-bg.jpg);")
+		+e.container.container
+			+e.IMG.bg-photo.d-none.d-xl-block(src="img/header-bg-photo.png" alt="#")
+			.row
+				+e.main-col.col.d-flex.justify-content-end
+					+e.block
+						+e.H1.title КОНТАКТЫ КОМПАНИИ "SPRAVKI-026.COM"
+						+e.P.main-text Вам нужна справка 026&nbsp;у для оформления в&nbsp;учебные заведения? Тогда обязательно запишите нам и&nbsp;мы&nbsp;поможем вам получить ее&nbsp;быстро. Наш медицинский центр всегда рад прийти вам на&nbsp;помощь и&nbsp;оформить документ за&nbsp;один день. Связаться с&nbsp;нами можно несколькими способами, и&nbsp;вы&nbsp;всегда можете выбрать подходящий именно вам.
+						+e.P.main-text Ежедневно наши операторы принимают звонки по&nbsp;телефону. Они ответят на&nbsp;ваши вопросы по&nbsp;поводу справки 026&nbsp;у, а&nbsp;также примут заявку на&nbsp;ее&nbsp;оформление. Время приема заявок по&nbsp;телефону&nbsp;&mdash; с&nbsp;9:00 до&nbsp;22:00 часов по&nbsp;Москве. Также вы&nbsp;можете написать сообщение на&nbsp;электронную почту или оставить заказ на&nbsp;сайте. Вам обязательно ответят и&nbsp;проконсультируют.
+						+e.P.main-text Самый быстрый способ связаться с&nbsp;нашим медицинским центром&nbsp;&mdash; это форма онлайн-заявки на&nbsp;нашем сайте. Этот вариант доступен круглосуточно, а&nbsp;отклик на&nbsp;обращение вы&nbsp;получите в&nbsp;течение рабочего дня. Мы&nbsp;ждем ваш звонок или заявку. Дайте нам знать, что вам нужна справка 026&nbsp;у, и&nbsp;вы&nbsp;останетесь довольны быстрым и&nbsp;профессиональным оформлением медицинского документа с&nbsp;гарантией качества.
+
+	// end header-block
+
+
+mixin header-block-thanks()
+	// start header-block
+	.bg-thanks
+		+b.header-block#header-block-thanks(style="background-image: url(img/header-bg.jpg);")
+			+e.container.container
+				+e.IMG.bg-photo.d-none.d-xl-block(src="img/header-bg-photo.png" alt="#")
+				.row
+					+e.main-col.col.d-flex.justify-content-center.align-items-center
+						+e.block
+							+e.H1.title Спасибо за вашу заявку!
+							+e.P.main-text Вы можете вернуться на главную страницу
+							+b.A.btn-main(href="/") Вернуться на главную страницу
+
+	// end header-block

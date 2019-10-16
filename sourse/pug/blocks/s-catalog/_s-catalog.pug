@@ -1,0 +1,77 @@
+mixin s-catalog()
+	// start s-catalog
+	+b.SECTION.s-catalog.section.block-with-lazy#s-catalog&attributes(attributes)
+		.container
+			+e.title-wrap
+				h2 Другие справки, которые&nbsp;мы&nbsp;оформляем
+				+e.subtitle Мы предлагаем только официальные документы, которые не вызовут вопросов при проверке и не создадут вам никаких сложностей.
+			.row
+				+e.col.col-sm-6.col-xl-4
+					+e.item
+						+e.img-wrap
+							img(src='img/cat1.jpg' alt='')
+						+e.descr
+							+e.title Справка из&nbsp;банка для&nbsp;оформления визы
+							+e.price 2 000 руб.
+							+e.A.btn.btn.btn-secondary(href='#') Перейти
+				+e.col.col-sm-6.col-xl-4
+					+e.item
+						+e.img-wrap
+							img(src='img/cat2.jpg' alt='')
+						+e.descr
+							+e.title Характеристика с места работы (подтверждение)
+							+e.price 3 000 руб.
+							+e.A.btn.btn.btn-secondary(href='#') Перейти
+				+e.col.col-sm-6.col-xl-4
+					+e.item
+						+e.img-wrap
+							img(src='img/cat3.jpg' alt='')
+						+e.descr
+							+e.title Справка 2 НДФЛ с места работы о доходах
+							+e.price 2 000 руб.
+							+e.A.btn.btn.btn-secondary(href='#') Перейти
+				+e.col.col-sm-6.col-xl-4
+					+e.item
+						+e.img-wrap
+							img(src='img/cat4.jpg' alt='')
+						+e.descr
+							+e.title Выписки с движением денежных средств по счету за требуемый период
+							+e.price 3 000 руб.
+							+e.A.btn.btn.btn-secondary(href='#') Перейти
+				+e.col.col-sm-6.col-xl-4
+					+e.item
+						+e.img-wrap
+							img(src='img/cat5.jpg' alt='')
+						+e.descr
+							+e.title Справка с места работы о заработной плате + подтверждение
+							+e.price 2 000 руб.
+							+e.A.btn.btn.btn-secondary(href='#') Перейти
+				+e.col.col-sm-6.col-xl-4
+					+e.item
+						+e.img-wrap
+							img(src='img/cat6.jpg' alt='')
+						+e.descr
+							+e.title Трудовой договор + подтверждение
+							+e.price 2 000 руб.
+							+e.A.btn.btn.btn-secondary(href='#') Перейти
+			+e.phone-block
+				+e.phone-img-wrap
+					img(src='img/deliver-city-1.png' alt='')
+				+e.phone-text Для заказа любой справки звоните по телефону с 09:00 до 22:00
+				.row
+					.col-sm-4
+						+e.phone-title
+							+icon('phone')
+							| Москва:
+						+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+					.col-sm-4
+						+e.phone-title
+							+icon('phone')
+							| Санкт-Петербург:
+						+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+					.col-sm-4
+						+e.phone-title
+							+icon('phone')
+							| Новосибирск:
+						+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+	// end s-catalog

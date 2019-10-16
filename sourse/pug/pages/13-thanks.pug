@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-buy/_s-buy.pug
+include ../blocks/s-order-advantages/_s-order-advantages.pug
+include ../blocks/s-data/_s-data.pug
+include ../blocks/s-mark-advantages/_s-mark-advantages.pug
+include ../blocks/s-order-now/_s-order-now.pug
+include ../blocks/s-deliver-city/_s-deliver-city.pug
+include ../blocks/s-reviews/_s-reviews.pug
+include ../blocks/s-price/_s-price.pug
+include ../blocks/s-about-company/_s-about-company.pug
+
+block title
+	title Контакты компании Spravki-026.com📝
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		//- +top-line()
+		+top-nav()
+	.thanks-extra
+		+header-block-thanks()
+		+footer()
+

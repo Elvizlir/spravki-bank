@@ -1,0 +1,119 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/svg/sprite.svg#" + name)
+
+
+
+mixin breadcrumb(...items)
+	nav.breadcrumb
+		-for (var i = 0; i < items.length - 1; i++)
+			a.breadcrumb-item(href='#')= items[i]
+		span.breadcrumb-item.active=  items[items.length - 1]
+
+		
+mixin pugin()
+	nav(aria-label='...')
+		ul.pagination.justify-content-center
+			li.page-item.disabled
+				a.page-link(href='#', tabindex='-1') 
+					i(class="fas fa-chevron-left")
+			li.page-item.disabled
+				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
+
+			li.page-item
+				a.page-link(href='#') 1
+			li.page-item.active
+				a.page-link(href='#')
+					| 2 
+					span.sr-only (current)
+			li.page-item
+				a.page-link.page-link-more(href='#') ...
+			li.page-item
+				a.page-link(href='#') 3
+
+			li.page-item
+				a.page-link.d-none.d-md-block(href='#') Дальше
+			li.page-item
+				a.page-link(href='#') 
+					i(class="fas fa-chevron-right")
+//- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
+mixin arrow()
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+		+icon('chevron-right')
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		+icon('chevron-left')
+		
+ 
+mixin soc()
+	+b.soc
+		mixin item()
+			+e.A.item(href="" target="_blank"): i(class="fab")&attributes(attributes)
+		+item()(class="fa-twitter")
+		+item()(class=" fa-facebook")
+		+item()(class="fa-google-plus")
+//- WP menu
+//- mixin mnu()
+//- 	- var nav= { "Наши работы":"#","Цены":"#","Калькулятор":"#","Акции":"#" ,"Заказать":"#"}
+//- 	ul.menu
+//- 		li.menu-item.menu-item-has-children
+//- 			a(href="#") О нас
+//- 			ul.sub-menu
+//- 				li.menu-item: a(href="#") Строительство загородных домов
+//- 				li.menu-item: a(href="#") Отделка загородных домов
+//- 				li.menu-item: a(href="#") Покраска деревянных домов
+//- 				li.menu-item: a(href="#") Штукатурные фасады загородных домов
+//- 		each linkPatch, linkName in nav
+//- 			li.menu-item: a(href="#")= linkName
+
+mixin mnu()
+	//- - var nav= {"Главная ":"#","Статьи  ":"01-articles.html","Вопрос-ответ   ":"10-faq.html","Отзывы ":"#"," О компании  ":"#"," Контакты ":"#"}
+	+e.UL.nav
+			+e.LI.item: +e.A.link(href="/") Главная
+			+e.LI.item: +e.A.link(href="01-articles.html") Статьи
+			+e.LI.item: +e.A.link(href="10-faq.html") Вопрос-Ответ
+			+e.LI.item: +e.A.link.scroll-link(href="/#s-reviews") Отзывы
+			+e.LI.item: +e.A.link(href="11-about-company.html") О компании
+			+e.LI.item: +e.A.link(href="12-contacts.html") Контакты
+
+
+mixin sticky-block()
+	// start sticky-block
+	+b.container-with-sticky.d-none.d-xl-block
+		+e.sticky-block&attributes(attributes)
+			+e.toggle-block--js.d-none.d-xl-none 
+				img( class="res-i" src="img/deliver-city-3.png", alt="#")
+
+			+e.main-block
+				+e.form-block
+					+e.title Заказать справку
+					+form-wrap
+						+input("","ФИО")
+						+e.input-wrap.form-group
+							+e.SELECT.input 
+								option Ваш город
+								option 1
+								option 1
+								option 1
+						+input("","Сумма (в валюте) в справке")
+						+input("tel","Телефон для связи")
+						+ta("Доп. данные (серия, номер,  код подразделения и др.)")
+						.btn-slide
+							+e.btn.btn.btn-secondary(type="submit") Заказать справку
+					+e.A.link.scroll-link(href="/#s-data") Перечень необходимых данных
+	// end sticky-block
+
+
+mixin modal-btn()
+	// start sticky-block
+	+b.modal-btn.d-block.d-xl-none
+		+e.sticky-block&attributes(attributes)
+				
+				+b.btn-main.btn-call(href="tel:+7(495)108-74-55")
+					+e.IMG.modal-btn-img(src="img/deliver-city-1.png" alt="#")
+
+				+b.btn-main.popup-with-move-anim(href="#modal-call")
+					+e.IMG.modal-btn-img(src="img/deliver-city-3.png" alt="#")
+	// end sticky-block
+
+

@@ -1,0 +1,61 @@
+
+
+mixin mob-mnu()
+	
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+		
+			+mnu()
+			.text-right
+	//  мобильное меню
+
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			+e.block
+				+e.top-wrap
+					.row
+						.col-auto
+							+e.A.logo-wrapper(href='#')
+								+icon('logo')
+								+e.title-wrapper
+									+e.title SpravkI-bank.com
+									+e.subtitle Справки о доходах для оформления виз
+						.col-auto.d-none.d-xl-block
+							+e.phone-title
+								+icon('phone')
+								| Москва:
+							+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+						.col-auto.d-none.d-xl-block
+							+e.phone-title
+								+icon('phone')
+								| Санкт-Петербург:
+							+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+						.col-auto.d-none.d-xl-block
+							+e.phone-title
+								+icon('phone')
+								| Новосибирск:
+							+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+						.col.d-none.d-xl-block
+							+e.work-time
+								+icon('time')
+								| 09:00 - 22:00
+							+e.work-city по Мск
+						+e.col-menu.col.col-md-auto.d-xl-none.d-flex.align-items-center.justify-content-end
+							+b.toggle-menu-mobile--js.d-xl-none
+									span
+				.col-12.d-none.d-xl-block
+					+mnu()
+			//- .row
+			//- 	+e.logo-block.col-auto
+			//- 		//- +e.IMG.logo-image(src="img/header-logo.png" alt="#")
+			//- 		+e.logo-title
+			//- 			a(href="/") spravki-026.com
+			//- 		+e.logo-subtitle
+			//- 			a(href="/") Детская справка 026/у-2000
+			//- 	.col.align-self-center.d-none.d-xl-block
+			//- 		+mnu()
+	// end top-nav

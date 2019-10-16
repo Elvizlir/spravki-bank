@@ -1,0 +1,169 @@
+.s-contact {
+	background-image: url(../img/footer-bg.jpg);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	padding: rem(80) 0 rem(100) !important;
+	color: #fff;
+	&__col-title{
+		font-size: rem(36);
+		letter-spacing: 1px;
+		font-weight: 700;
+		margin-bottom: rem(30);
+		@include media-breakpoint-down(lg) {
+			max-width: rem(280);
+		}
+	}
+	.row{
+		@include roww(50);
+	}
+	&__adress-block{
+		padding-left: rem(102);
+		margin-bottom: rem(40);
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: rem(45);
+			width: rem(12);
+			height: rem(12);
+			background: linear-gradient(to right, #FF9966, #FF5E62 100%);
+			border-radius: 50%;
+			background-color: $secondary;
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: rem(61);
+			height: rem(61);
+			background-image: url(../img/map.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+	&__mail-block{
+		padding-left: rem(102);
+		position: relative;
+		margin-bottom: rem(30);
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: rem(45);
+			width: rem(12);
+			height: rem(12);
+			background: linear-gradient(to right, #FF9966, #FF5E62 100%);
+			border-radius: 50%;
+			background-color: $secondary;
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			top: rem(-10);
+			left: 0;
+			width: rem(62);
+			height: rem(62);
+			background-image: url(../img/mail.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+	&__mail{
+		display: block;
+		color: #fff;
+	}
+	&__item{
+		margin-bottom: rem(30);
+	}
+	&__link{
+		color: #fff;
+		display: block;
+		font-weight: 600;
+		font-size: rem(18);
+	}
+	&__text{
+		font-weight: 300;
+		flex-grow: 1;
+		line-height: rem(26);
+	}
+	&__form{
+		width: rem(308);
+		input{
+			height: rem(50) !important;
+		}
+		textarea{
+			height: rem(138);
+		}
+	}
+	.form-wrap{
+		&__btn{
+			margin-top: rem(10);
+		}
+		select{
+			height: rem(50);
+		}
+	}
+	&__form-col{
+		@include media-breakpoint-down(lg) {
+			margin-top: rem(20);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__map-col{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		@include media-breakpoint-down(lg) {
+			justify-content: center;
+		}
+	}
+	.map-wrap{
+		border-radius: rem(7);
+		overflow: hidden;
+		margin-top: rem(20);
+		height: rem(380);
+		width: 100%;
+		position: relative;
+		> ymaps{
+			position: absolute;
+			height: 100% !important;
+			width: 100% !important;
+			top: 0;
+			left: 0;
+		}
+	}
+	&__map-text{
+		width: 100%;
+	}
+	//	
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

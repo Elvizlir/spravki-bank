@@ -1,0 +1,20 @@
+mixin s-data()
+	// start s-data
+	+b.SECTION.s-data.section.block-with-lazy#s-data&attributes(attributes)
+		.container
+			.main-block
+				+e.H2.title.block-title Данные, которые необходимо заполнить в форме:
+				.row
+					.col-12.col-md-auto
+						+e.UL.list.atricle-text
+							+e.LI.item ФИО;
+							+e.LI.item Серия, номер паспорта;
+							+e.LI.item Код подразделения паспорта;
+							+e.LI.item Кем, когда выдан паспорт;
+					.col-12.col-md
+						+e.UL.list.atricle-text
+							+e.LI.item Сумма / Валюта отображаемая в справке;
+							+e.LI.item Дата выдачи справки;
+							+e.LI.item Контактный телефон для связи;
+							+e.LI.item Место доставки.
+	// end s-data

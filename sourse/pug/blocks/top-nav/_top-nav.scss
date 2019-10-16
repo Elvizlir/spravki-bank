@@ -1,0 +1,315 @@
+.top-nav {
+	color: #FFF;
+	position: fixed;
+	width: 100vw;
+	left: 0;
+	top: 0;
+	// padding-right: calc(100vw - 100%); 
+	// position: absolute;
+	top: 100%;
+	// @include clearfix;ss
+	z-index: 20;
+	@include mt;
+	top: 0;
+	left: 0;
+	width: 100%;
+	a{
+		color: #FFF;
+	}
+	// &.fixed {
+	// 	// width: 100vw;
+	// 	// bottom: auto;
+	// 	// margin-top: 0;
+	// 	// background-color: #fff;
+	// }
+
+	&__nav {
+		max-width: rem(780);
+		margin: 0 auto;
+		text-align: center;
+		list-style-type: none;
+		display: flex;
+		justify-content: space-around;
+		padding-left: rem(10);
+		padding-right: rem(10);
+		padding-top: rem(11);
+		padding-bottom: rem(11);
+	}
+
+	&__item {
+		display: inline-block;
+		list-style-type: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&__logo-block{
+		@include media-breakpoint-down(xs) {
+			padding-left: rem(25);
+			padding-right: 0;
+		}
+		padding-left: rem(40);
+	}
+		&__block{
+			@include media-breakpoint-up(sm){
+				padding: rem(15);
+			}
+			padding: rem(5);
+			background-color: rgba(104,122,172,0.7);
+			@include media-breakpoint-up(xl){
+				padding: rem(16) rem(30) 0;
+			}
+			box-shadow: 0px rem(8) rem(20) rgba(0,0,0,0.1);
+			border-radius: 0px 0px rem(7) rem(7);
+			.row{
+				justify-content: space-between;
+				@include media-breakpoint-up(xl){
+					@include roww(25);
+				}
+			}
+		}
+		&__top-wrap{
+			@include media-breakpoint-up(xl){
+				padding-bottom: rem(34);
+				border-bottom: 1px solid #E7EBED;
+			}
+		}
+		&__logo-wrapper{
+			display: flex;
+			align-items: center;
+			.icon{
+				@include media-breakpoint-up(sm){
+					font-size: rem(42);
+					margin-right: rem(30);
+				}
+				font-size: rem(30);
+				color: $secondary;
+				margin-right: rem(15);
+			}
+			&:hover{
+				text-decoration: none;
+				text-transform: none;
+			}
+		}
+		&__title{
+			@include media-breakpoint-up(sm){
+				font-size: rem(20);
+			}
+			text-transform: uppercase;
+			font-size: rem(16);
+			font-weight: 700;
+			display: block;
+			margin-bottom: rem(5);
+		}
+		&__subtitle{
+			@include media-breakpoint-up(sm){
+				font-size: rem(13);
+			}
+			font-size: rem(10);
+			display: block;
+		}
+		&__phone{
+			&-title{
+				.icon{
+					font-size: rem(20);
+					color: $secondary;
+					margin-right: rem(10);
+				}
+				display: flex;
+				align-items: center;
+				margin-bottom: rem(5);
+			}
+			&-number{
+				display: block;
+				font-size: rem(18);
+			}
+		}
+		&__work{
+			&-time{
+				margin-bottom: rem(5);
+				.icon{
+					font-size: rem(20);
+					margin-right: rem(5);
+				}
+			}
+			&-city{
+				font-size: rem(16);
+			}
+		}
+	// 
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	// 
+	@include media-breakpoint-between(md, xl) {}
+
+	// 
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	// 
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+}
+
+// мобильное меню
+
+// мобильное меню
+$h: em(2);
+
+.toggle-menu-mobile {
+	display: block;
+	height: $h* 14;
+	margin-left: 0;
+	position: relative;
+	z-index: 999  ;
+	padding: 3px;
+	border-radius: 5px;
+	cursor: pointer;
+
+
+	span:after,
+	span:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: $h*2;
+	}
+
+	span:after {
+		top: $h * 4;
+	}
+
+	span {
+		position: relative;
+		display: block;
+	}
+
+	span,
+	span:after,
+	span:before {
+		// width: 32px;
+		font-size: 32px;
+		width: 1em;
+		height: $h;
+		background-color: $secondary;
+		transition: all 0.3s;
+		backface-visibility: hidden;
+		border-radius: 6px;
+	}
+
+	&.on {
+		opacity: 0;
+	}
+
+	&.on span {
+		background-color: transparent;
+	}
+
+	&.on span:before {
+		transform: rotate(45deg) translate(em(-1), 0px);
+	}
+
+	&.on span:after {
+		transform: rotate(-45deg) translate(em(3), em(-4));
+	}
+}
+
+.menu-mobile {
+	position: fixed !important;
+	max-width: 85%;
+	height: 101vh;
+	width: 280px;
+	top: 0;
+	// left: 0;
+	right: 0;
+	transform: translate(120%, 0);
+	@include mt(.6);
+	will-change: transform;
+	
+	&__inner {
+		background-color: #fff;
+		padding: 5% 0;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		height: 100%;
+	}
+	
+ 
+	&.active {
+		z-index: 999;
+		transform: translate(0, 0);
+
+		.toggle-menu-mobile {
+			opacity: 1;
+		 
+		}
+	}
+
+	.toggle-menu-mobile {
+		// position: relative;
+		cursor: pointer;
+		margin-left: -15%;
+		position: absolute;
+		opacity: 0;
+		left: 0;
+		right: auto;
+		color: #FFF;
+		top: 10px;
+		z-index: 9999;
+		background-color: transparent;
+
+		span,
+		span:after,
+		span:before {
+			background-color: #FFF;
+		}
+
+		&.on {
+			opacity: 1;
+
+			span {
+				background-color: transparent;
+			}
+		}
+	}
+
+	ul {
+		position: relative;
+	}
+
+	li {
+		display: block;
+		margin: 0;
+		border-top: 1px solid rgba(255, 255, 255, .3);
+
+		a {
+			// font-size: 16px;
+
+			padding: 10px;
+			display: block;
+ 
+		}
+	}
+}

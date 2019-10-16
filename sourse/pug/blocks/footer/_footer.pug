@@ -1,0 +1,29 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			.row
+				.col-auto
+					+e.A.logo-wrapper(href='#')
+						+icon('logo')
+						+e.title-wrapper
+							+e.title SpravkI-bank.com
+							+e.subtitle Справки о доходах для оформления виз
+				.col.d-none.d-lg-flex.align-items-center.justify-content-center
+					.block
+						+e.IMG.counter(src="img/counter.gif" alt="#")
+				.col.d-none.d-xl-block
+					+e.phone-title
+						+icon('phone')
+						| Москва:
+					+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+				.col.d-none.d-xl-block
+					+e.phone-title
+						+icon('phone')
+						| Санкт-Петербург:
+					+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+				.col.d-none.d-xl-block
+					+e.phone-title
+						+icon('phone')
+						| Новосибирск:
+					+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+
