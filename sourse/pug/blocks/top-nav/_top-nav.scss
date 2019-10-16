@@ -51,6 +51,7 @@
 		padding-left: rem(40);
 	}
 		&__block{
+			position: relative;
 			@include media-breakpoint-up(sm){
 				padding: rem(15);
 			}
@@ -136,6 +137,9 @@
 				font-size: rem(16);
 			}
 		}
+		&__col-menu{
+			position: unset;
+		}
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -187,7 +191,11 @@ $h: em(2);
 	padding: 3px;
 	border-radius: 5px;
 	cursor: pointer;
-
+	@include media-breakpoint-down(xs){
+		right: 0;
+		@include a-cent(y);
+	}
+	
 
 	span:after,
 	span:before {
