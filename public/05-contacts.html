@@ -111,7 +111,7 @@
       <!-- end HEADER.header-->
       <!-- start sticky-block-->
       <div class="modal-btn d-block d-xl-none">
-        <div class="modal-btn__sticky-block"><a class="btn-main btn-call" href="tel:+7(495)108-74-55"><img class="btn-main__modal-btn-img" src="img/deliver-city-1.png" alt="#" title=""/></a><a class="btn-main popup-with-move-anim" href="#modal-call"><img class="btn-main__modal-btn-img" src="img/deliver-city-3.png" alt="#" title=""/></a>
+        <div class="modal-btn__sticky-block"><a class="btn-main btn-call popup-with-move-anim" href="#modal-phone"><img class="btn-main__modal-btn-img" src="img/deliver-city-1.png" alt="#" title=""/></a><a class="btn-main popup-with-move-anim" href="#modal-call"><img class="btn-main__modal-btn-img" src="img/deliver-city-3.png" alt="#" title=""/></a>
         </div>
       </div>
       <!-- end sticky-block-->
@@ -253,27 +253,55 @@
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
       <form>
-        <div class="form-wrap__title">Оформить заявку на справку 026/у
+        <div class="form-wrap__title">Оформить заявку на справку о доходах
         </div>
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="ФИО ребёнка"/>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Дата рождения ребёнка"/>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="ФИО"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Адрес места жительства"/>
+        <div class="form-wrap__input-wrap form-group">
+          <select class="form-wrap__input"> 
+            <option>Ваш город</option>
+            <option>1</option>
+            <option>1</option>
+            <option>1</option>
+          </select>
+        </div>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Сумма (в валюте) в справке"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Мобильный телефон для связи"/>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Телефон для связи"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Дополнительные данные (сделанные прививки, рост, вес, и др.)"></textarea>
+        <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Доп. данные (серия, номер,  код подразделения и др.)"></textarea>
         </div>
         <!-- +e.input-wrap-->
         <div class="btn-slide">
-          <button class="btn-main" type="submit">Оформить заявку
+          <button class="btn btn-primary" type="submit">Оформить заявку
           </button>
         </div><a class="form-wrap__link scroll-link" href="/#s-data">Перечень необходимых данных</a>
+      </form>
+    </div>
+    <!-- #modal-call-->
+    <!-- modal-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-phone">
+      <form>
+        <div class="form-wrap__title">Свяжитесь с нами!
+        </div>
+        <div class="btn-slide"><a class="btn btn-primary" href="tel:+74951084392"> 
+            <div class="form-wrap__city">Москва:
+            </div>
+            <div class="form-wrap__phone">+7 (495) 108-43-92
+            </div></a></div>
+        <div class="btn-slide"><a class="btn btn-primary" href="tel:+74951084392"> 
+            <div class="form-wrap__city">Санкт-Петербург:
+            </div>
+            <div class="form-wrap__phone">+7 (495) 108-43-92
+            </div></a></div>
+        <div class="btn-slide"><a class="btn btn-primary" href="tel:+74951084392"> 
+            <div class="form-wrap__city">Новосибирск:
+            </div>
+            <div class="form-wrap__phone">+7 (495) 108-43-92
+            </div></a></div>
       </form>
     </div>
     <!-- #modal-call-->

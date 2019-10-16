@@ -33,14 +33,37 @@ mixin modal()
 	//- 			br 
 
 	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
-		+e.title Оформить заявку на справку 026/у
-		+input("","ФИО ребёнка")
-		+input("","Дата рождения ребёнка")
-		+input("","Адрес места жительства")
-		+input("tel","Мобильный телефон для связи")
-		+ta("Дополнительные данные (сделанные прививки, рост, вес, и др.)")
+		+e.title Оформить заявку на справку о доходах
+		+input("","ФИО")
+		+e.input-wrap.form-group
+			+e.SELECT.input 
+				option Ваш город
+				option 1
+				option 1
+				option 1
+		+input("","Сумма (в валюте) в справке")
+		+input("tel","Телефон для связи")
+		+ta("Доп. данные (серия, номер,  код подразделения и др.)")
 		.btn-slide
-			+b.BUTTON.btn-main(type="submit") Оформить заявку
+			+b.BUTTON.btn.btn-primary(type="submit") Оформить заявку
 		+e.A.link.scroll-link(href="/#s-data") Перечень необходимых данных
+	// #modal-call
+	// modal
+	
+	
+	+form-wrap()(id="modal-phone" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+		+e.title Свяжитесь с нами!
+		.btn-slide
+			a.btn.btn-primary(href='tel:+74951084392') 
+				+e.city Москва:
+				+e.phone +7 (495) 108-43-92
+		.btn-slide
+			a.btn.btn-primary(href='tel:+74951084392') 
+				+e.city Санкт-Петербург:
+				+e.phone +7 (495) 108-43-92
+		.btn-slide
+			a.btn.btn-primary(href='tel:+74951084392') 
+				+e.city Новосибирск:
+				+e.phone +7 (495) 108-43-92
 	// #modal-call
 	// modal
