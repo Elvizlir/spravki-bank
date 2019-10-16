@@ -500,7 +500,7 @@ h2{
 	padding-top: rem(70);
 	margin-bottom: rem(70);
 	@include media-breakpoint-down(md) {
-		margin-top: rem(120);
+		// margin-top: rem(120);
 		margin-bottom: rem(40);
 	}
 	&__main-block{

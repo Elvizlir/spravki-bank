@@ -1,0 +1,60 @@
+mixin one-day()
+	// start one-day
+	+b.SECTION.one-day.section.block-with-lazy#one-day&attributes(attributes)
+		+e.bg-wrap
+			img(src='img/one-bg.jpg' alt='')
+		.container
+			.main-block
+				+e.H2.title.block-title Мы оформим для Вас справку из&nbsp;банка 
+					span за 24 часа!
+				+e.P.subtitle У нас только официальные документы, что гарантирует Вам положительный результат при подаче его в посольство. Также наши эксперты могут подготовить справку или выписку из банка по вашему образцу с необходимыми данными.
+				.row
+					+e.item-wrap.col-md-4.col-sm-6
+						+e.item
+							+e.item-title 3700+
+							+e.item-subtitle довольных клиентов
+					+e.item-wrap.col-md-4.col-sm-6
+						+e.item
+							+e.item-title 100%
+							+e.item-subtitle подлинность документа
+					+e.item-wrap.col-md-4.col-sm-6
+						+e.item
+							+e.item-title 1 день
+							+e.item-subtitle на создание и доставку
+					+e.item-wrap.col-md-4.col-sm-6
+						+e.item
+							+e.item-title Лучшая
+							+e.item-subtitle стоимость в регионе
+					+e.item-wrap.col-md-4.col-sm-6
+						+e.item
+							+e.item-title Удобные
+							+e.item-subtitle способы оплаты заказа
+					+e.item-wrap.col-md-4.col-sm-6
+						+e.item
+							+e.item-title Онлайн
+							+e.item-subtitle для Вас подача заявки
+				+e.phone-title Для заказа звоните по телефонам:
+				.row
+					.col-md-4.col-sm-6
+						+e.phone-city
+							+icon('phone')
+							| Москва:
+						+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+					.col-md-4.col-sm-6
+						+e.phone-city
+							+icon('phone')
+							| Санкт-Петербург:
+						+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+					.col-md-4.col-sm-6
+						+e.phone-city
+							+icon('phone')
+							| Новосибирск:
+						+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
+
+				+e.order
+					+e.order-text Закажите справку сейчас
+					+e.order-img-wrap
+						+e.IMG.order-img(src='img/order-m.jpg' alt='')
+					+icon('arrow')
+
+	// end one-day
