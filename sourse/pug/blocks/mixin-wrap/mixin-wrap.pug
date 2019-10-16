@@ -70,11 +70,11 @@ mixin mnu()
 	//- - var nav= {"Главная ":"#","Статьи  ":"01-articles.html","Вопрос-ответ   ":"10-faq.html","Отзывы ":"#"," О компании  ":"#"," Контакты ":"#"}
 	+e.UL.nav
 			+e.LI.item: +e.A.link(href="/") Главная
-			+e.LI.item: +e.A.link(href="01-articles.html") Статьи
-			+e.LI.item: +e.A.link(href="10-faq.html") Вопрос-Ответ
+			+e.LI.item: +e.A.link(href="#") Статьи
+			+e.LI.item: +e.A.link(href="#") Вопрос-Ответ
 			+e.LI.item: +e.A.link.scroll-link(href="/#s-reviews") Отзывы
-			+e.LI.item: +e.A.link(href="11-about-company.html") О компании
-			+e.LI.item: +e.A.link(href="12-contacts.html") Контакты
+			+e.LI.item: +e.A.link(href="#") О компании
+			+e.LI.item: +e.A.link(href="#") Контакты
 
 
 mixin sticky-block()
