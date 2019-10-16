@@ -11,11 +11,10 @@ include ../blocks/s-order-now/_s-order-now.pug
 include ../blocks/s-deliver-city/_s-deliver-city.pug
 include ../blocks/s-reviews/_s-reviews.pug
 include ../blocks/s-price/_s-price.pug
-include ../blocks/s-articles/_s-articles.pug
-include ../blocks/s-accordion/_s-accordion.pug
+include ../blocks/s-about/_s-about.pug
 
 block title
-	title Вопросы и ответы о медицинской справке 026/у-2000
+	title Контакты компании Spravki-026.com📝
 
 block pagecontent
 	+mob-mnu()
@@ -23,20 +22,8 @@ block pagecontent
 		//- +top-line()
 		+top-nav()
 	+modal-btn()
-	+header-block-2("background-image: url(img/faq-bg.jpg);", "ОТВЕТЫ НА ЧАСТЫЕ ВОПРОСЫ")
-	.block-with-sticky
-		+sticky-block()(class="articles-sticky")
-		+s-accordion()
-		//- +s-order-advantages()
-		//- +s-buy()
-		//- +s-data
-		//- +s-buy-2()
-		//- +s-mark-advantages()
-		//- +s-buy-3()
-		//- +s-order-now()
-		//- +s-deliver-city()
-	//- +s-reviews()
-	//- +s-price()
-	//- +s-contact()
+	+header-block-2("background-image: url(img/cont-bg.jpg);")(class='page-header')
+	+s-about()
+	+s-contact()
 	+footer()
 

@@ -109,6 +109,10 @@ html {
 	font-size: $em-base;
 }
 
+footer{
+	margin-top: auto;
+}
+
 body {
 	min-width: 320px;
 	position: relative;
@@ -145,8 +149,11 @@ body {
 }
 
 .main-wrapper {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	overflow: hidden;
+	min-height: 100vh;
 	height: 100%;
 }
 
@@ -490,7 +497,7 @@ h2{
 
 .article-page{
 	position: relative;
-	margin-top: rem(160);
+	padding-top: rem(70);
 	margin-bottom: rem(70);
 	@include media-breakpoint-down(md) {
 		margin-top: rem(120);
@@ -500,9 +507,9 @@ h2{
 		position: relative;
 	}
 	h1{
+		font-size: rem(35);
 		color: $primary;
 		font-weight: 700;
-		text-transform: uppercase;
 		line-height: rem(49);
 		margin-bottom: rem(33);
 		max-width: rem(688);
@@ -511,6 +518,7 @@ h2{
 		}
 	}
 	h3{
+		color: #3B4048;
 		@include media-breakpoint-down(md) {
 			line-height: rem(30);
 		}
@@ -524,6 +532,7 @@ h2{
 		margin-bottom: rem(55);
 	}
 	p{
+		color: #3B4048;
 		margin-top: rem(20);
 	}
 	&__item{
@@ -539,18 +548,19 @@ h2{
 		z-index: -1;
 	}
 	ul{
-		color: #212529;
+		color: #3B4048;
 		font-weight: 300;
-		padding-left: rem(30);
+		padding-left: rem(40);
 		margin-top: rem(-15);
 		list-style: none;
 		li{
 			position: relative;
 			margin-bottom: rem(5);
 			&::before{
-				content: "–";
+				content: "•";
 				position: absolute;
-				top: 0;
+				top: rem(-2);
+				font-size: rem(18);
 				left: rem(-15);
 				font-weight: 300;
 			}
@@ -619,5 +629,24 @@ h2{
 		&::after{
 			transform: translate(50%,50%);
 		}
+	}
+}
+
+.thanks-page{
+	text-align: center;
+	padding: rem(70) 0;
+	&__title{
+		font-size: rem(35);
+		font-weight: 700;
+		margin-bottom: rem(20);
+    color: #566AA1;
+	}
+	&__subtitle{
+		font-size: rem(24);
+		font-weight: 600;
+		margin-bottom: rem(40);
+	}
+	&__btn{
+		max-width: rem(308);
 	}
 }

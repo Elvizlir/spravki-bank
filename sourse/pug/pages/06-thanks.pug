@@ -14,14 +14,18 @@ include ../blocks/s-price/_s-price.pug
 include ../blocks/s-about-company/_s-about-company.pug
 
 block title
-	title Контакты компании Spravki-026.com📝
+	title Спасибо
 
 block pagecontent
 	+mob-mnu()
 	+header()
 		//- +top-line()
 		+top-nav()
-	.thanks-extra
-		+header-block-thanks()
-		+footer()
+	+header-block-2("background-image: url(img/cont-bg.jpg);")(class='page-header')
+	+b.thanks-page
+		.container
+			+e.H1.title Спасибо за Вашу заявку!
+			+e.subtitle Мы свяжемся с Вами в ближайшее время.
+			+e.A.btn.btn.btn-primary(href='/') Вернуться на главную
+	+footer()
 

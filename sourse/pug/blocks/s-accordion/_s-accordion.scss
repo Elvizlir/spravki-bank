@@ -7,17 +7,20 @@
 			 max-width: rem(687);
 		 }
 		 .accordeon-head{
-			 background-color: #B8B8C9;
+			 background-color: #CCD9ED;
 			 border-bottom: 1px solid #ddd;
 			 cursor: pointer;
 			 padding: rem(18) rem(30) rem(18) rem(80);
-			 color: #fff;
+			 color: #2C3035;
 			 border-bottom: 2px solid #fff;
 			 &:hover{
-				background: #5A8BB3
+				background: #566AA1
 			 }
 			 @include media-breakpoint-down(sm) {
 				padding: rem(10) rem(10) rem(10) rem(50);
+			 }
+			 &:first-child{
+				 border-radius: rem(7) rem(7) 0 0;
 			 }
 		 }
 		 &__header-text{
@@ -69,10 +72,11 @@
 		 	}
 		 }
 		 .active{
-			 background-color: #3F6C8F;
+			 color: #fff;
+			 background-color: #566AA1;
 			 border-bottom: 2px solid #DFDFDF;
 			 &:hover{
-				 background-color: #3F6C8F;
+				 background-color: #566AA1;
 			 }
 		 }
 		 .active-body{

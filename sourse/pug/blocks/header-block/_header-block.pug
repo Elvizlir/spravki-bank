@@ -52,9 +52,9 @@ mixin header-block(t)
 
 mixin header-block-2(b, t)
 	// start header-block
-	+b.header-block(style=b)
+	+b.header-block(style=b)&attributes(attributes)
 		+e.container.container
-					+e.H1.title=t
+			block
 
 	// end header-block
 

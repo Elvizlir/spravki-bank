@@ -14,7 +14,7 @@ include ../blocks/s-price/_s-price.pug
 include ../blocks/s-about-company/_s-about-company.pug
 
 block title
-	title Контакты компании Spravki-026.com📝
+	title Информация и отзывы о компании Spravki-026.com
 
 block pagecontent
 	+mob-mnu()
@@ -22,7 +22,10 @@ block pagecontent
 		//- +top-line()
 		+top-nav()
 	+modal-btn()
-	+header-block-contacts()
-	+s-contact()
+	+header-block-2("background-image: url(img/about-bg.jpg);")(class='page-header')
+	.block-with-sticky
+		+sticky-block()
+		+s-about-company-top()
+		+s-about-company()
 	+footer()
 

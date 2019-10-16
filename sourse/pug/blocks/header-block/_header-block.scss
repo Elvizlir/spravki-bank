@@ -162,3 +162,13 @@
 
 	@include media-breakpoint-down(xs) {}
 }
+
+.page-header{
+	text-align: center;
+	h1{
+		font-size: rem(35);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(100);
+		}
+	}
+}
