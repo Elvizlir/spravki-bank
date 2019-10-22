@@ -39,7 +39,8 @@
 
  .container-with-sticky {
 	//  padding-top: rem(60);
- 	position: absolute;
+	 position: absolute;
+	 z-index: 10;
  	top: 0;
  	right: 0;
  	width: 43%;
