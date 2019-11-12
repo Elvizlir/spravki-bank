@@ -35,8 +35,8 @@ $html = '
     if (!empty($_POST['city'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Город:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['city'] . '</b></td></tr>';
     }
-    if (!empty($_POST['city'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Сумма вв справке:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['city'] . '</b></td></tr>';
+    if (!empty($_POST['summ'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Сумма в справке:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['summ'] . '</b></td></tr>';
     }
     if (!empty($_POST['tel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
