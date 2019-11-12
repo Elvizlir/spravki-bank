@@ -24,16 +24,16 @@ mixin s-contact()
 				+e.form-col.col-md-6.col-lg-auto
 					+e.col-title Задать вопрос
 					+e.form
-						+form-wrap
-							+input("","Введите Ваше имя")
-							+input("tel","Введите номер телефона")
+						+form-wrap('Contact form')
+							+input("","Введите Ваше имя")(name='name' required)
+							+input("tel","Введите номер телефона")(name='tel' required)
 							+e.input-wrap.form-group
-								+e.SELECT.input.form-control
+								+e.SELECT.input.form-control(name='city')
 									option Ваш город
 									option 1
 									option 1
 									option 1
-							+ta("Введите вопрос","")
+							+ta("Введите вопрос","")(name='ask' required)
 							.btn-form
 								+e.BUTTON.btn.btn.btn-secondary(type="submit") Задать вопрос
 				+e.map-col.col-xl

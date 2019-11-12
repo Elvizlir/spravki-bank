@@ -87,17 +87,17 @@ mixin sticky-block()
 			+e.main-block
 				+e.form-block
 					+e.title Заказать справку
-					+form-wrap
-						+input("","ФИО")
+					+form-wrap('Sticky form')
+						+input("","ФИО")(name='name' required)
 						+e.input-wrap.form-group
-							+e.SELECT.input 
+							+e.SELECT.input(name='city')
 								option Ваш город
 								option 1
 								option 1
 								option 1
-						+input("","Сумма (в валюте) в справке")
-						+input("tel","Телефон для связи")
-						+ta("Доп. данные (серия, номер,  код подразделения и др.)")
+						+input("","Сумма (в валюте) в справке")(name='summ')
+						+input("tel","Телефон для связи")(name='tel' required)
+						+ta("Доп. данные (серия, номер,  код подразделения и др.)")(name='add')
 						.btn-slide
 							+e.btn.btn.btn-secondary(type="submit") Заказать справку
 					+e.A.link.scroll-link(href="/#s-data") Перечень необходимых данных

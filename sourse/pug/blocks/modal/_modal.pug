@@ -32,18 +32,18 @@ mixin modal()
 	//- 			.h3 Скоро с Вами свяжутся
 	//- 			br 
 
-	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+	+form-wrap('Modal form')(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
 		+e.title Оформить заявку на справку о доходах
-		+input("","ФИО")
+		+input("","ФИО")(name='name' required)
 		+e.input-wrap.form-group
-			+e.SELECT.input 
+			+e.SELECT.input(name='city')
 				option Ваш город
 				option 1
 				option 1
 				option 1
-		+input("","Сумма (в валюте) в справке")
-		+input("tel","Телефон для связи")
-		+ta("Доп. данные (серия, номер,  код подразделения и др.)")
+		+input("","Сумма (в валюте) в справке")(name='summ')
+		+input("tel","Телефон для связи")(name='tel' required)
+		+ta("Доп. данные (серия, номер,  код подразделения и др.)")(name='add')
 		.btn-slide
 			+b.BUTTON.btn.btn-primary(type="submit") Оформить заявку
 		+e.A.link.scroll-link(href="/#s-data") Перечень необходимых данных

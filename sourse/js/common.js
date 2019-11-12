@@ -60,6 +60,35 @@ jQuery(document).ready(function ($) {
 		}
 	}
 
+	// form
+	$("form").submit(function () { //Change
+		const th = $(this);
+		$.ajax({
+			type: "POST",
+			url: 'action.php', //Change
+			data: th.serialize()
+		}).success(function () {
+			// $.magnificPopup.close();
+			// $.magnificPopup.open({
+			// 	items: {
+			// 		src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
+			// 		type: 'inline'
+
+			// 	}
+			// })
+			window.location.replace("/06-thanks.html");
+			setTimeout(function () {
+				// Done Functions
+				th.trigger("reset");
+				// $.magnificPopup.close();
+				// ym(53383120, 'reachGoal', 'zakaz');
+			}, 4000);
+		});
+		return false;
+	});
+	// /form
+
+
 	$(window).resize(function () {
 		heightses();
 

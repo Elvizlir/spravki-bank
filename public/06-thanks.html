@@ -162,26 +162,27 @@
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
       <form>
+        <input class="order" type="hidden" name="order" value="Modal form"/>
         <div class="form-wrap__title">Оформить заявку на справку о доходах
         </div>
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="ФИО"/>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="ФИО" name="name" required="required"/>
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
-          <select class="form-wrap__input"> 
+          <select class="form-wrap__input" name="city">
             <option>Ваш город</option>
             <option>1</option>
             <option>1</option>
             <option>1</option>
           </select>
         </div>
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Сумма (в валюте) в справке"/>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Сумма (в валюте) в справке" name="summ"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Телефон для связи"/>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Телефон для связи" name="tel" required="required"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Доп. данные (серия, номер,  код подразделения и др.)"></textarea>
+        <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Доп. данные (серия, номер,  код подразделения и др.)" name="add"></textarea>
         </div>
         <!-- +e.input-wrap-->
         <div class="btn-slide">
@@ -194,6 +195,7 @@
     <!-- modal-->
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-phone">
       <form>
+        <input class="order" type="hidden" name="order"/>
         <div class="form-wrap__title">Свяжитесь с нами!
         </div>
         <div class="btn-slide"><a class="btn btn-primary" href="tel:+74951084392"> 
