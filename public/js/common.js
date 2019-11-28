@@ -48,7 +48,20 @@ jQuery(document).ready(function ($) {
 		// скрывает моб меню
 
 		var topH = $("header ").innerHeight();
+		var topH2 = $(".top-nav").innerHeight();
 
+ 
+		$(window).scroll(function() {
+		 
+			if ($(window).scrollTop() > topH2) {
+				$('.top-nav__top-wrap').addClass('header-border');
+				// $('.top-nav  ').addClass('show');
+				$('.top-nav__nav  ').hide();
+			} else {
+				$('.top-nav__top-wrap').removeClass('header-border');
+				$('.top-nav__nav  ').show();
+			}
+		});
 
 		// конец добавил
 		if (window.matchMedia("(min-width: 1200px)").matches) {

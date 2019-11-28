@@ -53,19 +53,19 @@
 		&__block{
 			position: relative;
 			@include media-breakpoint-up(sm){
-				padding: rem(15);
+				padding: rem(10);
 			}
 			padding: rem(5);
 			background-color: rgba(104,122,172,0.7);
 			@include media-breakpoint-up(xl){
-				padding: rem(16) rem(30) 0;
+				padding: rem(16) rem(20) 0;
 			}
 			box-shadow: 0px rem(8) rem(20) rgba(0,0,0,0.1);
 			border-radius: 0px 0px rem(7) rem(7);
 			.row{
 				justify-content: space-between;
 				@include media-breakpoint-up(xl){
-					@include roww(25);
+					@include roww(10);
 				}
 			}
 		}

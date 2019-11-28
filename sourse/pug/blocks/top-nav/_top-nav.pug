@@ -2,7 +2,7 @@
 
 mixin mob-mnu()
 	
-	+b.menu-mobile--js.d-xl-none
+	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
@@ -24,12 +24,12 @@ mixin top-nav()
 								+e.title-wrapper
 									+e.title SpravkI-bank.com
 									+e.subtitle Справки о доходах для оформления виз
-						.col-auto.d-none.d-xl-block
+						.col.d-none.d-xl-block
 							+e.phone-title
 								+icon('phone')
 								| Москва:
 							+e.A.phone-number(href='tel:+74951084392') +7 (495) 108-43-92
-						.col-auto.d-none.d-xl-block
+						.col.d-none.d-xl-block
 							+e.phone-title
 								+icon('phone')
 								| Санкт-Петербург:
@@ -44,8 +44,8 @@ mixin top-nav()
 								+icon('time')
 								| 09:00 - 22:00
 							+e.work-city по Мск
-						+e.col-menu.col.col-md-auto.d-xl-none.d-flex.align-items-center.justify-content-end
-							+b.toggle-menu-mobile--js.d-xl-none
+						+e.col-menu.col.col-md-auto.d-flex.align-items-center.justify-content-end
+							+b.toggle-menu-mobile--js
 									span
 				.col-12.d-none.d-xl-block
 					+mnu()

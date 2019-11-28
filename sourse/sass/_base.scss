@@ -656,3 +656,10 @@ h2{
 		max-width: rem(308);
 	}
 }
+
+body .header-border{
+	@include media-breakpoint-up(lg){
+		border-bottom: none !important;
+		padding-bottom: rem(10);
+	}
+}

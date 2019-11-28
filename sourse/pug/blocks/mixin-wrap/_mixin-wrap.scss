@@ -174,10 +174,10 @@
  .modal-btn{
 	 position: fixed;
 	 right: 0;
-	 top: 30vh;
+	 top: 100px;
 	 z-index: 10;
 	 @include media-breakpoint-down(sm) {
-		 top: rem(120);
+		 top: rem(80);
 	 }
 	 .btn-call{
 		 margin-bottom: rem(40);
